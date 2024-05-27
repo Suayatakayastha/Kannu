@@ -1,3 +1,4 @@
+//testing git
 function fetchProducts(category) {
     let xhr = new XMLHttpRequest();
     xhr.open('GET', 'fetch_products.php', true);
