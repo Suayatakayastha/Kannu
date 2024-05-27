@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">E-Commerce</div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#search">Search</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="banner">
+      <img src="img1.jpg" alt="Banner Image" />
+    </section>
+
+    <section class="description">
+      <p>
+        Welcome to our E-Commerce website. Browse through various categories to
+        find the best products for you.
+      </p>
+    </section>
+
+    <section id="categories" class="categories">
+      <h2>Browse by Category</h2>
+      <div class="category-buttons">
+        <button onclick="fetchProducts('Books')">Books</button>
+        <button onclick="fetchProducts('Electronics')">Electronics</button>
+        <button onclick="fetchProducts('Perfume')">Perfume</button>
+      </div>
+      <div id="product-table"></div>
+    </section>
+
+    <section id="search" class="search">
+      <h2>Search Products</h2>
+      <form id="Form" onsubmit="searchProducts(event)">
+        <input
+          type="text"
+          id="search-keyword"
+          placeholder="Enter product id or name"
+        />
+        <input type="number" id="min-price" placeholder="Min price" />
+        <input type="number" id="max-price" placeholder="Max price" />
+        <div>
+          <button class="btn" type="submit">Search</button>
+        </div>
+      </form>
+      <div id="search-results"></div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 E-Commerce Website. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
